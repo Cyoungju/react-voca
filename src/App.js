@@ -2,7 +2,7 @@ import Day from "./component/Day";
 import DayList from "./component/DayList";
 import Header from "./component/Header";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EmptyPage from "./component/EmptyPage";
+import EmptyPage from "./component/EmptyPage"; 
 
 function App() {
   return (
