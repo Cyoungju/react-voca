@@ -17,7 +17,7 @@ export default function(){
             })  
         }).then(res =>{
             alert("생성이 완료되었습니다.");
-            navigate(`/`)
+            navigate('/')
         }) 
     }
     return <div>
