@@ -9,7 +9,7 @@ export default function Word(/*props*/ {word : w}){ //새로운 변수명으로 
     }
     function toggleDone(){
         //setIsDone(!isDone);
-        fetch(`http;//localhost:3001/words/${word.id}`,{
+        fetch(`http://localhost:3001/words/${word.id}`,{
             method : 'PUT',
             header : {
                 'Content-Type' : 'applacation/json',
@@ -25,7 +25,7 @@ export default function Word(/*props*/ {word : w}){ //새로운 변수명으로 
 
     function del(){
         if(window.confirm('삭제 하시겠습니까?')){
-            fetch(`http;//localhost:3001/words/${word.id}`,{
+            fetch(`http://localhost:3001/words/${word.id}`,{
                 method : 'DELETE',
             }).then(res=>{
                 if(res.ok){
