@@ -7,7 +7,19 @@ export default function Word({word}){
         setIsShow(!isShow);
     }
     function toggleDone(){
-        setIsDone(!isDone);
+        //setIsDone(!isDone);
+        fetch(`http;//localhost:3001/words/${word.id}`,{
+            method : 'PUT',
+            header : {
+                'Content-Type' : 'applacation/json',
+            },
+            body : JSON.stringify({
+                ...word, // 기존데이터
+                isDone : !isDone
+            }) // json 데이터로 받아오기
+        }).then(res =>{
+            setIsDone(!isDone);
+        })
     }
 
     return(
