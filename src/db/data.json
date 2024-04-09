@@ -48,6 +48,13 @@
       "eng": "book1",
       "kor": "책1",
       "isDone": false
+    },
+    {
+      "id": "a4df",
+      "day": "2",
+      "eng": "as",
+      "kor": "as",
+      "isDone": false
     }
   ]
 }
