@@ -1,14 +1,15 @@
 import { useNavigate } from 'react-router-dom';
-import useFetch from "../hooks/useFetch"
+import useFetch from "../hooks/useFetch.ts"
 
 export default function(){
     const days = useFetch('http://localhost:3001/days')
     const navigate = useNavigate(); 
-    function addDay(e){
+
+    function addDay(e : React.FormEvent){
         e.preventDefault();
         fetch(`http://localhost:3001/days/`,{            
             method : 'POST',
-            header : {
+            headers : {
                 'Content-Type' : 'applacation/json',
             },
             body : JSON.stringify({
@@ -17,7 +18,7 @@ export default function(){
             })  
         }).then(res =>{
             alert("생성이 완료되었습니다.");
-            navigate(`/`)
+            navigate('/')
         }) 
     }
     return <div>

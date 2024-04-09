@@ -1,10 +1,10 @@
-import Day from "./component/Day";
-import DayList from "./component/DayList";
-import Header from "./component/Header";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EmptyPage from "./component/EmptyPage"; 
-import CreateWord from "./component/CreateWord";
-import CreateDay from "./component/CreateDay";
+import Day from "./component/Day.tsx";
+import DayList from "./component/DayList.tsx";
+import Header from "./component/Header.tsx";
+import EmptyPage from "./component/EmptyPage.tsx"; 
+import CreateWord from "./component/CreateWord.tsx";
+import CreateDay from "./component/CreateDay.tsx";
 
 function App() {
   return (

@@ -1,9 +1,22 @@
-import { useState } from "react"
+import { useState } from "react" 
 
-export default function Word(/*props*/ {word : w}){ //새로운 변수명으로 할당 - props로 받은 word를 w라는 변수명으로 사용
-    const [word, setWord] = useState(w);
+interface IProps{
+    word : IWord;
+}
+export interface IWord{
+    id: number;
+    day : number;
+    eng : string;
+    kor : string;
+    isDone : boolean;    
+}
+
+export default function Word(/*props*/ {word : w} : IProps){ //새로운 변수명으로 할당 - props로 받은 word를 w라는 변수명으로 사용
+    const [word, setWord] = useState(w); 
     const [isShow, setIsShow] = useState(false);
-    const [isDone, setIsDone] = useState(word.isDone)
+    const [isDone, setIsDone] = useState(word.isDone);
+
+
     function toggleshow(){
         setIsShow(!isShow);
     }
@@ -11,11 +24,11 @@ export default function Word(/*props*/ {word : w}){ //새로운 변수명으로 
         //setIsDone(!isDone);
         fetch(`http://localhost:3001/words/${word.id}`,{
             method : 'PUT',
-            header : {
+            headers : {
                 'Content-Type' : 'applacation/json',
             },
             body : JSON.stringify({
-                ...word, // 기존데이터
+                ...word, // 기존데이터 
                 isDone : !isDone
             }) // json 데이터로 받아오기
         }).then(res =>{
@@ -29,7 +42,10 @@ export default function Word(/*props*/ {word : w}){ //새로운 변수명으로 
                 method : 'DELETE',
             }).then(res=>{
                 if(res.ok){
-                    setWord({id:0})
+                    setWord({
+                        ...word, // 기존에 모든 값을 사용하면서
+                        id : 0, // id만 바꿔줌
+                    });
                 }
             })
         }
