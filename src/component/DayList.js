@@ -1,13 +1,12 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useFetch from '../hooks/useFetch';
 
 
 export default function DayList(){
-    const [days, setDays] = useState();
+    const days = useFetch('http://localhost:3001/days'); 
     
-
     return <ul className='list_day'>
-        {dummy.days.map(
+        {days.map(
             day => (
                 <li key={day.id}>
                     <Link to={`/day/${day.day}`}>
