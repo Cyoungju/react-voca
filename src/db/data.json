@@ -1,59 +1,57 @@
 {
   "days": [
     {
-      "id": "1",
+      "id": 1,
       "day": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "day": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "day": 3
+    },
+    {
+      "id": 4,
+      "day": 4
+    },
+    {
+      "id": 5,
+      "day": 5
+    },
+    {
+      "id": 6,
+      "day": 6
     }
   ],
   "words": [
     {
-      "id": "1",
-      "day": 1,
-      "eng": "book",
-      "kor": "책",
-      "isDone": false
-    },
-    {
-      "id": "2",
+      "id": 2,
       "day": 1,
       "eng": "apple",
       "kor": "사과",
       "isDone": false
     },
     {
-      "id": "3",
+      "id": 3,
       "day": 2,
       "eng": "car",
       "kor": "자동차",
       "isDone": false
     },
     {
-      "id": "5",
+      "id": 5,
       "day": 3,
       "eng": "dog",
       "kor": "강아지",
       "isDone": false
     },
     {
-      "id": "6",
+      "id": 6,
       "day": 3,
       "eng": "book1",
       "kor": "책1",
-      "isDone": false
-    },
-    {
-      "id": "a4df",
-      "day": "2",
-      "eng": "as",
-      "kor": "as",
       "isDone": false
     }
   ]
