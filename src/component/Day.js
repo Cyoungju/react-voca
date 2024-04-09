@@ -1,5 +1,4 @@
-//import dummy from "../db/data.json";
-import { useState, useEffect } from 'react';
+//import dummy from "../db/data.json"; 
 import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import Word from "./Word";
