@@ -20,7 +20,7 @@ export default function CreateWord(){
             const eng = engRef.current.value;
             const kor = korRef.current.value;
 
-            fetch(`http://localhost:3001/words/`,{            
+            fetch('http://localhost:3001/words/',{            
                 method : 'POST',
                 headers : {
                     "Content-Type" : "applacation/json",
