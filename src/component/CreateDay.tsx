@@ -7,7 +7,7 @@ export default function(){
 
     function addDay(e : React.FormEvent){
         e.preventDefault();
-        fetch(`http://localhost:3001/days/`,{            
+        fetch('http://localhost:3001/days/',{            
             method : 'POST',
             headers : {
                 'Content-Type' : 'applacation/json',
